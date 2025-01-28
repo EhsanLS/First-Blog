@@ -1,0 +1,110 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+{% block title %}
+    | {{ article.title }}
+{% endblock %}
+
+
+{% block content %}
+    <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
+        <div class="container px-4 px-lg-5">
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto py-4 py-lg-0">
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{% url 'blog:home' %}">خانه</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Page Header-->
+    <header class="masthead" style="background-image: url('{{ article.thumbnail.url }}')">
+        <div class="container position-relative px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    <div class="post-heading">
+                        <h1>{{ article.title }}</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Post Content-->
+    <article class="mb-4">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    {{ article.content | linebreaks }}
+                </div>
+                <div class="comment">
+                    <h4>{{ comments_count }} دیدگاه</h4>
+                    <h2>دیدگاه ها :</h2>
+
+                    {% if comments %}
+                        <ul>
+                            {% for comment in comments %}
+                                <li>{{ comment.author }}: {{ comment.content }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% else %}
+                        <p>برای این مطلب هنوز نظری ثبت نشده است</p>
+                    {% endif %}
+
+                    <h3>اضافه کردن دیدگاه</h3>
+                    <div class="comment-form-container">
+                        <form id="commentForm" method="post">
+                            {% csrf_token %}
+                            {{ form.as_p }}
+                            <button type="submit">ارسال</button>
+                        </form>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </article>
+{% endblock %}
+
+
+
+
+
+
+{#<!DOCTYPE html>#}
+{#<html lang="en">#}
+{#<head>#}
+{#    <title>{{ article.title }}</title>#}
+{#    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">#}
+{#</head>#}
+{#<body>#}
+{#    <header>#}
+{#        <div class="container">#}
+{#            <div id="branding">#}
+{#                <h1>My Blog</h1>#}
+{#            </div>#}
+{#            <nav>#}
+{#                <ul>#}
+{#                    <li><a href="{% url 'blog:home' %}">Home</a></li>#}
+{#                </ul>#}
+{#            </nav>#}
+{#        </div>#}
+{#    </header>#}
+{#    <div id="main" class="container">#}
+{#        <h1>{{ article.title }}</h1>#}
+{#        <p>{{ article.content }}</p>#}
+{#        <h2>Comments</h2>#}
+{#        <ul>#}
+{#            {% for comment in comments %}#}
+{#                <li>{{ comment.author }}: {{ comment.content }}</li>#}
+{#            {% endfor %}#}
+{#        </ul>#}
+{#        <h2>Add a comment</h2>#}
+{#        <form id="commentForm" method="post">#}
+{#            {% csrf_token %}#}
+{#            {{ form.as_p }}#}
+{#            <button type="submit">Submit</button>#}
+{#        </form>#}
+{#    </div>#}
+{#</body>#}
+{#</html>#}

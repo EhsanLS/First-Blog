@@ -1,0 +1,93 @@
+@font-face {
+  font-family: Sahel;
+  src: url('Sahel.eot');
+  src: url('Sahel.eot?#iefix') format('embedded-opentype'),
+       url('Sahel.woff2') format('woff2'),
+       url('Sahel.woff') format('woff'),
+       url('Sahel.ttf') format('truetype');
+}
+
+body {
+    direction: rtl;
+    text-align: right;
+    font-family: Sahel;
+    font-size: 14px;
+}
+
+.navbar-nav {
+    margin-left: initial !important;
+    text-align: center;
+}
+
+.post-meta {
+    text-align: left;
+}
+
+.comment {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.comment h2, .comment h3 {
+    color: #333;
+}
+
+.comment-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px auto;
+    max-width: 600px;
+    text-align: left;
+}
+
+.comment li {
+    list-style: none;
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.comment-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#commentForm {
+    width: 100%;
+    max-width: 600px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#commentForm input, #commentForm textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btn-submit {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-submit:hover {
+    background-color: #0056b3;
+}
+
+textarea {
+    resize: none;
+}
