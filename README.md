@@ -1,7 +1,7 @@
 # First-Blog
 This is my first Django blog
 
-#Installation and Setup:
+##Installation and Setup:
 
   git clone https://github.com/EhsanLS/First-Blog.git
 
