@@ -1,22 +1,22 @@
 # First-Blog
 This is my first Django blog
 
-#Installation and Setup:
-git clone https://github.com/EhsanLS/First-Blog.git
+## Installation and Setup:
 
-  cd First-Blog
+- git clone https://github.com/EhsanLS/First-Blog.git
 
-  python -m venv env
-  source env/bin/activate  # On Windows use `env\Scripts\activate`
+- cd First-Blog
 
-  pip install -r requirements.txt
+- python -m venv env
+- source env/bin/activate  # On Windows use `env\Scripts\activate`
 
-  mkdir -p media/images
+- pip install -r requirements.txt
 
-  python manage.py makemigrations
-  python manage.py migrate
+- mkdir -p media/images
 
-  python manage.py runserver
+- python manage.py makemigrations
+- python manage.py migrate
+- python manage.py runserver
 
 
 By following these steps, you should be able to set up and run the project locally. If you have any questions or need further assistance, feel free to ask!
