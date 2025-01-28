@@ -1,13 +1,13 @@
 # First-Blog
 This is my first Django blog
 
--#Installation and Setup:
-'''bash
-  git clone https://github.com/EhsanLS/First-Blog.git
+#Installation and Setup:
 
-  cd First-Blog
+  *git clone https://github.com/EhsanLS/First-Blog.git
 
-  python -m venv env
+  *cd First-Blog
+
+  *python -m venv env
   source env/bin/activate  # On Windows use `env\Scripts\activate`
 
   pip install -r requirements.txt
