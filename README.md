@@ -5,7 +5,7 @@ This is my first Django blog
 
   git clone https://github.com/EhsanLS/First-Blog.git
 
-  -cd First-Blog-
+  cd First-Blog
 
   python -m venv env
   source env/bin/activate  # On Windows use `env\Scripts\activate`
