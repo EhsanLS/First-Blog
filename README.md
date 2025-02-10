@@ -12,7 +12,7 @@ This is my first Django blog
 
 - pip install -r requirements.txt
 
-- mkdir -p media/images
+- mkdir -p media/images  # On Windows use `mkdir media\images`
 
 - python manage.py makemigrations
 - python manage.py migrate

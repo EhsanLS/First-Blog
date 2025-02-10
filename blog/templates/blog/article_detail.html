@@ -36,9 +36,11 @@
                 <div class="col-md-10 col-lg-8 col-xl-7">
                     {{ article.content | linebreaks }}
                 </div>
+                <!-- Divider-->
+                <hr class="my-4"/>
                 <div class="comment">
                     <h4>{{ comments_count }} دیدگاه</h4>
-                    <h2>دیدگاه ها :</h2>
+                    <h2>دیدگاه ها :</h2><br>
 
                     {% if comments %}
                         <ul>
@@ -49,7 +51,9 @@
                     {% else %}
                         <p>برای این مطلب هنوز نظری ثبت نشده است</p>
                     {% endif %}
-
+                    <br><br><br><br>
+                    <!-- Divider-->
+                    <hr class="my-4"/>
                     <h3>اضافه کردن دیدگاه</h3>
                     <div class="comment-form-container">
                         <form id="commentForm" method="post">
@@ -58,8 +62,6 @@
                             <button type="submit">ارسال</button>
                         </form>
                     </div>
-
-
                 </div>
             </div>
         </div>

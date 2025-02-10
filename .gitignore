@@ -1,0 +1,36 @@
+# محیط مجازی
+.venv/
+env/
+*.pyc
+*.pyo
+**/__pycache__/
+__pycache__/
+*.swp
+
+# فایل‌های تنظیمات شخصی یا محلی
+*.env
+.env
+
+# فایل‌های دیتابیس محلی
+db.sqlite3
+
+# کش پلتفرم‌ها
+.DS_Store
+Thumbs.db
+
+# فایل‌های static جمع‌آوری‌شده
+staticfiles/
+
+# فایل‌های media که توسط کاربران آپلود می‌شود
+media/
+
+# فایل‌های توسعه
+.idea/
+*.log
+*.bak
+*.~*
+*.tmp
+
+# فایل‌های پوشه migrations غیراز init
+**/migrations/*
+!**/migrations/__init__.py

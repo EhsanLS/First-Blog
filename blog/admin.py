@@ -26,6 +26,7 @@ class ArticleAdmin(admin.ModelAdmin):
 class CommentAdmin(admin.ModelAdmin):
     list_filter = ['created_at', 'is_approve']
     list_display = ['__str__', 'author', 'created_at', 'is_approve']
+    list_editable = ['is_approve']
 
 
 admin.site.register(Article, ArticleAdmin)

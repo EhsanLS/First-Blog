@@ -48,7 +48,7 @@ class Comment(models.Model):
     author = models.CharField(max_length=100, db_index=True, verbose_name='نویسنده')
     content = models.TextField(verbose_name='محتوا', db_index=True,)
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='تاریخ نگارش')
-    is_approve = models.BooleanField(default=False, editable=True, verbose_name='تایید شده / نشده')
+    is_approve = models.BooleanField(default=False, verbose_name='تایید شده / نشده')
 
     class Meta:
         verbose_name = 'نظر'
