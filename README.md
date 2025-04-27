@@ -8,7 +8,7 @@ This is my first Django blog
 - cd First-Blog
 
 - python -m venv env
-- source env/bin/activate  # On Windows use `env\Scripts\activate`
+- source venv/bin/activate  # On Windows use `venv\Scripts\activate`
 
 - pip install -r requirements.txt
 
